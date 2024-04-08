@@ -1,4 +1,5 @@
 import './LoginPage.css';
+import {Button} from "../../common/buttons";
 
 export const LoginPage = () => {
 
@@ -19,7 +20,7 @@ export const LoginPage = () => {
                     </div>
 
                     <div>
-                        <button>sign in</button>
+                        <Button>sign in</Button>
                     </div>
 
                 </div>
