@@ -1,10 +1,10 @@
 import React from 'react';
 import  s from './Input.module.css';
 
-interface InputPropsType extends React.HTMLProps<HTMLInputElement> {
+type InputPropsType = React.HTMLProps<HTMLInputElement> & {
     isError?: boolean;
     helperText?: string;
-}
+};
 
 export const Input: React.FC<InputPropsType> = ({ isError = false, helperText, ...props }) => {
     return (
