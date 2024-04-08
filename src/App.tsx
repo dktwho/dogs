@@ -1,6 +1,5 @@
 import './App.css'
 import {LoginPage} from "./page/LoginPage/LoginPage.tsx";
-
 function App() {
 
     return (
@@ -9,5 +8,4 @@ function App() {
         </div>
     )
 }
-
 export default App

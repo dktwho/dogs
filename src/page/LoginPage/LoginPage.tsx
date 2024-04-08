@@ -3,7 +3,6 @@ import './LoginPage.css';
 import {Input} from '../../common/fields';
 import {Button} from '../../common/buttons';
 
-
 export const LoginPage = () => {
     const [formValues, setFormValues] = useState({username: '', password: ''});
     return (
@@ -11,7 +10,6 @@ export const LoginPage = () => {
             <div className='loginPage_container'>
                 <div>header</div>
                 <div className='loginPage_form_container'>
-
 
                     <div className='loginPage_input_container'>
                         <Input value={formValues.username} placeholder={'username'} isError={true}
