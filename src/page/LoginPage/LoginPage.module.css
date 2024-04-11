@@ -6,7 +6,7 @@
 
 }
 
-.loginPage_container {
+.container {
     background-color: #fff;
     box-shadow: 0 4px 50px 2px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
@@ -16,11 +16,11 @@
     flex-direction: column;
 }
 
-.loginPage_form_container {
+.form_container {
     padding: 0 100px;
 }
 
-.loginPage_input_container {
+.input_container {
     margin-bottom: 10px;
     height: 100%;
 }

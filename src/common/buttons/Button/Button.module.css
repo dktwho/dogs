@@ -4,7 +4,8 @@
     background: #f5c678;
     padding: 10px 80.5px;
     border: none;
-    color: #fff
+    color: #fff;
+    cursor: pointer;
 }
 
 .button:hover {
