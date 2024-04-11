@@ -14,6 +14,14 @@ const validatePassword = (value: string) => {
     return null
 }
 
+const loginFormValidateSchema = {
+    username: validateUsername,
+    password: validatePassword
+}
+const validateLoginForm = (name: 'username' | 'password', value: string) => {
+    return loginFormValidateSchema[name](value)
+}
+
 type FormErrors = {
     username: string | null
     password: string | null
@@ -34,7 +42,7 @@ export const LoginPage = () => {
                                onChange={(event) => {
                                    const username = event.currentTarget.value;
                                    setFormValues({...formValues, username})
-                                   const error = validateUsername(username);
+                                   const error = validateLoginForm('username', username);
                                    setFormErrors({...formErrors, username: error})
                                }}
                                {...(!!formErrors.username && {
@@ -52,7 +60,7 @@ export const LoginPage = () => {
                                onChange={(event) => {
                                    const password = event.currentTarget.value
                                    setFormValues({...formValues, password})
-                                   const error = validatePassword(password);
+                                   const error = validateLoginForm('password', password);
                                    setFormErrors({...formErrors, password: error})
 
                                }}
