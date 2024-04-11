@@ -18,7 +18,7 @@ const loginFormValidateSchema = {
     username: validateUsername,
     password: validatePassword
 }
-const validateLoginForm = (name: 'username' | 'password', value: string) => {
+const validateLoginForm =(name: keyof typeof loginFormValidateSchema, value: string) => {
     return loginFormValidateSchema[name](value)
 }
 
