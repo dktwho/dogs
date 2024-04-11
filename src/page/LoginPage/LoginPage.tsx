@@ -4,14 +4,16 @@ import s from './LoginPage.module.css'
 import {Input} from '../../common/fields';
 import {Button} from "../../common/buttons";
 
-const validateUsername = (value: string) => {
+const validateIsEmpty = (value: string) => {
     if (!value) return 'field required'
     return null
 }
+const validateUsername = (value: string) => {
+    return validateIsEmpty(value)
+}
 
 const validatePassword = (value: string) => {
-    if (!value) return 'field required'
-    return null
+    return validateIsEmpty(value)
 }
 
 const loginFormValidateSchema = {
