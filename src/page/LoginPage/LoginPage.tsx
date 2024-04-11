@@ -58,6 +58,7 @@ export const LoginPage = () => {
                     <div className={s.input_container}>
                         <Input value={formValues.password}
                                placeholder={'password'}
+                               type={'password'}
                                isError={!!formErrors['password']}
                                onChange={(event) => {
                                    const password = event.currentTarget.value
