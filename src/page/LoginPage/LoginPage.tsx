@@ -32,20 +32,30 @@ export const LoginPage = () => {
                                    const error = validateUsername(username);
                                    setFormErrors({...formErrors, username: error})
                                }}
-                               {...(!!formErrors['username'] && {
-                                   isError: !!formErrors['username'],
-                                   helperText: formErrors['username']
+                               {...(!!formErrors.username && {
+                                   isError: !!formErrors.username,
+                                   helperText: formErrors.username
                                })}
                         />
 
                     </div>
 
                     <div className={s.input_container}>
-                        <Input value={formValues.password} placeholder={'password'} isError={!!formErrors['password']}
-                               onChange={(event) => setFormValues({
-                                   ...formValues,
-                                   password: event.currentTarget.value
-                               })}/>
+                        <Input value={formValues.password}
+                               placeholder={'password'}
+                               isError={!!formErrors['password']}
+                               onChange={(event) => {
+                                   const password = event.currentTarget.value
+                                   setFormValues({...formValues, password})
+                                   const error = validateUsername(password);
+                                   setFormErrors({...formErrors, password: error})
+
+                               }}
+                               {...(!!formErrors['password'] && {
+                                   isError: !!formErrors['password'],
+                                   helperText: formErrors['password']
+                               })}
+                        />
                     </div>
 
                     <div>
