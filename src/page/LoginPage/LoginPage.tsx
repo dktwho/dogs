@@ -14,9 +14,14 @@ const validatePassword = (value: string) => {
     return null
 }
 
+type FormErrors = {
+    username: string | null
+    password: string | null
+}
+
 export const LoginPage = () => {
     const [formValues, setFormValues] = useState({username: '', password: ''});
-    const [formErrors, setFormErrors] = useState<{ [key: string]: string | null }>({username: null, password: null});
+    const [formErrors, setFormErrors] = useState<FormErrors>({username: null, password: null});
     return (
         <div className={s.page}>
             <div className={s.container}>
@@ -47,13 +52,13 @@ export const LoginPage = () => {
                                onChange={(event) => {
                                    const password = event.currentTarget.value
                                    setFormValues({...formValues, password})
-                                   const error = validateUsername(password);
+                                   const error = validatePassword(password);
                                    setFormErrors({...formErrors, password: error})
 
                                }}
-                               {...(!!formErrors['password'] && {
-                                   isError: !!formErrors['password'],
-                                   helperText: formErrors['password']
+                               {...(!!formErrors.password && {
+                                   isError: !!formErrors.password,
+                                   helperText: formErrors.password
                                })}
                         />
                     </div>
