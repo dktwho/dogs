@@ -9,7 +9,7 @@ export const LoginPage = () => {
     return (
         <div className={s.loginPage}>
             <div className={s.container}>
-                <div>header</div>
+                <div className={s.container_header}>Doggee</div>
                 <div className={s.form_container}>
 
                     <div className={s.input_container}>
@@ -35,6 +35,7 @@ export const LoginPage = () => {
                     </div>
 
                 </div>
+                <div className={s.sign_up_container}>Create new account</div>
             </div>
         </div>
     );
