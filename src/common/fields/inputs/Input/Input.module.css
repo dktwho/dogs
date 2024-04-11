@@ -19,6 +19,7 @@
 .input:hover {
     background-color: #ededed;
 }
+
 .error {
     background-color: rgba(219, 57, 57, 0.3);
 }
